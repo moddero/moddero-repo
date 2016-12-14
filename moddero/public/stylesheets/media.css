@@ -20,21 +20,12 @@ abs-gender::before {
     text-align: cex .1em
 }
 
-}
-search-tabs-gendernter
-
-}
 #search-tabs-gender .tabs-gender a {
     margin-right: 0;
 
-padding:
-
-16
-px
-
-0
-13
-p
+    padding: 16px 0 13px;
+}
 
 @media only screen and (max-width: 1024px) {
     #{position:fixed;width:100%;background-color:#fff}#search-tabs-gender::after, #search-t
+}
