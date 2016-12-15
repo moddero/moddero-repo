@@ -4205,7 +4205,11 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 @media (min-width: 768px) {
   .navbar-header {
-    float: left;
+    float: right;
+
+    position: relative;
+    left: -50%; /* or right 50% */
+    text-align: left;
   }
 }
 .navbar-collapse {

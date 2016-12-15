@@ -1,4 +1,5 @@
 const User = require('mongoose').model('User');
+const Role = require('mongoose').model('Role');
 const encryption = require('./../utilities/encryption');
 
 module.exports = {
@@ -31,17 +32,24 @@ module.exports = {
                     salt: salt
                 };
 
-                User.create(userObject).then(user => {
-                    req.logIn(user, (err) => {
-                        if (err) {
-                            registerArgs.error = err.message;
-                            res.render('user/register', registerArgs);
-                            return;
-                        }
+                let roles = [];
+                Role.findOne({name: 'User'}).then(role => {
+                    roles.push(role.id);
 
-                        res.redirect('/')
+                    userObject.roles = roles;
+                    User.create(userObject).then(user => {
+                        user.prepareInsert();
+                        req.logIn(user, (err) => {
+                            if (err) {
+                                registerArgs.error = err.message;
+                                res.render('user/register', registerArgs);
+                                return;
+                            }
+
+                            res.redirect('/');
+                        })
                     })
-                })
+                });
             }
         })
     },
@@ -67,7 +75,13 @@ module.exports = {
                     return;
                 }
 
-                res.redirect('/');
+                let returnUrl = '/';
+                if(req.session.returnUrl) {
+                    returnUrl = req.session.returnUrl;
+                    delete req.session.returnUrl;
+                }
+
+                res.redirect(returnUrl);
             })
         })
     },
