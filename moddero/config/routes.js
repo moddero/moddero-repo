@@ -5,6 +5,7 @@ const articleController = require('./../controllers/article');
 const tagController = require('./../controllers/tag');
 
 module.exports = (app) => {
+    app.get('/contactus', homeController.contactus);
     app.get('/', homeController.index);
     app.get('/category/:id', homeController.listCategoryArticles);
 

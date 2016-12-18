@@ -17,6 +17,10 @@ module.exports = {
       }
   },
 
+    contactus: (req, res) => {
+      res.render('contactus');
+    },
+
     listCategoryArticles: (req, res) => {
       let id = req.params.id;
 

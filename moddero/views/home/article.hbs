@@ -2,9 +2,9 @@
     <div class="row">
         {{#each articles}}
             <div class="col-md-6">
-                <article>
+            <article>
                     <header>
-                        <h2>{{ this.title }}</h2>
+                        <a href="/article/details/{{this.id}}" class="btn btn-default btn-lg btn-block">{{ this.title }}</a>
                     </header>
 
                     <p>
