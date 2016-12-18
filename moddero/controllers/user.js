@@ -89,5 +89,11 @@ module.exports = {
     logout: (req, res) => {
         req.logOut();
         res.redirect('/');
+    },
+
+    details: (req, res) => {
+        User.findOne({id: res.locals.user.id}).then(user => {
+            res.render('user/details', user);
+        });
     }
 };
