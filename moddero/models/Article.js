@@ -4,6 +4,7 @@ let articleSchema = mongoose.Schema({
     title: {type: String, required: true},
     content: {type: String, required: true},
     imageUrl: {type: String, required: true},
+    brand: {type: String, required: true},
     author: {type: mongoose.Schema.Types.ObjectId, required: true, ref: 'User'},
     category: {type: mongoose.Schema.Types.ObjectId, required: true, ref: 'Category'},
     tags: [{type: mongoose.Schema.Types.ObjectId, required: true, ref: 'Tag'}],

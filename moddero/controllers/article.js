@@ -30,6 +30,8 @@ module.exports = {
             errorMsg = 'Invalid content!';
         } else if (!articleArgs.imageUrl) {
             errorMsg = 'Invalid image link!';
+        } else if (!articleArgs.brand) {
+            errorMsg = 'Invalid brand name!';
         }
 
         if (errorMsg) {
