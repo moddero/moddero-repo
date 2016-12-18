@@ -28,6 +28,8 @@ module.exports = {
             errorMsg = 'Invalid title!';
         } else if (!articleArgs.content) {
             errorMsg = 'Invalid content!';
+        } else if (!articleArgs.imageUrl) {
+            errorMsg = 'Invalid image link!';
         }
 
         if (errorMsg) {
