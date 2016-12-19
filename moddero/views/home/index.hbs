@@ -1,11 +1,68 @@
-<div class="container body-content">
-    <div class="col-md-6">
-        {{#each categories}}
-            <h2>
-                            <a href="/category/{{ this.id }}">
-                                {{ this.name }} ({{this.articles.length }})
-                            </a>
-                        </h2>
-        {{/each}}
-    </div>
+<p>
+<div class="btn btn-default btn-lg btn-block"><div style="padding-bottom: 20px; color: #ff0000;">Let us help you find quickly the thing you are most looking for !</div>
+    <form role="search">
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="What type of clothing are you most looking for ?">
+        </div>
+        <button type="submit" class="btn btn-success">Go !</button>
+    </form>
 </div>
+</p>
+<table class="table table-striped table-hover ">
+    <thead>
+    <tr>
+        <th></th>
+        <th style="padding-left: 50px; padding-right: 50px;"><form class="form-horizontal">
+            <fieldset>
+                <legend>Trending Now</legend>
+                <div class="form-group">
+                    <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+                    <div class="col-lg-10">
+                        <input type="text" class="form-control" id="inputEmail" placeholder="Email">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputPassword" class="col-lg-2 control-label">Password</label>
+                    <div class="col-lg-10">
+                        <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                    </div>
+                </div>
+            </fieldset>
+        </form></th>
+        <th style="padding-left: 50px; padding-right: 50px;"><form class="form-horizontal">
+            <fieldset>
+                <legend>Recommended for you</legend>
+                <div class="form-group">
+                    <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+                    <div class="col-lg-10">
+                        <input type="text" class="form-control" id="inputEmail" placeholder="Email">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputPassword" class="col-lg-2 control-label">Password</label>
+                    <div class="col-lg-10">
+                        <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                    </div>
+                </div>
+            </fieldset>
+        </form></th>
+        <th style="padding-left: 50px; padding-right: 50px;"><form class="form-horizontal">
+            <fieldset>
+                <legend>Latest discounts</legend>
+                <div class="form-group">
+                    <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+                    <div class="col-lg-10">
+                        <input type="text" class="form-control" id="inputEmail" placeholder="Email">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputPassword" class="col-lg-2 control-label">Password</label>
+                    <div class="col-lg-10">
+                        <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                    </div>
+                </div>
+            </fieldset>
+        </form></th>
+    </tr>
+    </thead>
+</table>

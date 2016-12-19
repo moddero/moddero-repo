@@ -17,6 +17,10 @@ module.exports = {
       }
   },
 
+    categoriesdetails: (req, res) => {
+        res.render('categoriesdetails');
+    },
+
     contactus: (req, res) => {
       res.render('contactus');
     },
