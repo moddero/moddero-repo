@@ -15,7 +15,7 @@
                 {{#each categories}}
                     <tr>
                         <td>{{this.id}}</td>
-                        <td>{{this.name}}</td>
+                        <td><a href="/category/{{this.id}}">{{this.name}}</a></td>
                         <td>
                             <a href="/admin/category/edit/{{this.id}}">Edit</a>
                             <a href="/admin/category/delete/{{this.id}}">Delete</a>

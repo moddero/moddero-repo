@@ -18,6 +18,7 @@ module.exports = {
   },
 
     categoriesdetails: (req, res) => {
+        console.log('I am here.')
         res.render('categoriesdetails');
     },
 

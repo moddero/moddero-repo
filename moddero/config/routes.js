@@ -5,9 +5,9 @@ const articleController = require('./../controllers/article');
 const tagController = require('./../controllers/tag');
 
 module.exports = (app) => {
-    app.get('/contactus', homeController.contactus);
-    app.get('/categoriesdetails', homeController.categoriesdetails);
     app.get('/', homeController.index);
+    app.get('/categoriesdetails', homeController.categoriesdetails);
+    app.get('/contactus', homeController.contactus);
     app.get('/category/:id', homeController.listCategoryArticles);
 
     app.get('/user/register', userController.registerGet);

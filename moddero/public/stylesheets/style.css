@@ -7162,3 +7162,18 @@ span.moddero-footer-copyright-part-link:first-child {
 .moddero-footer-bottom-column>div:last-child {
     padding-right:0;
 }
+#footerLeftPanel
+{
+    width: 450px;
+    float: left;
+}
+#footerRightPanel
+{
+    width: 336px;
+    float: right;
+}
+#footerMidPanel
+{
+    width: 450px;
+    padding:10px;
+}
