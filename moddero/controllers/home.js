@@ -18,12 +18,15 @@ module.exports = {
   },
 
     categoriesdetails: (req, res) => {
-        console.log('I am here.')
         res.render('categoriesdetails');
     },
 
     contactus: (req, res) => {
       res.render('contactus');
+    },
+
+    terms: (req, res) => {
+        res.render('terms');
     },
 
     listCategoryArticles: (req, res) => {
