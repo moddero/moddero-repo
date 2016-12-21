@@ -2,18 +2,52 @@
     <div class="well">
         <form class="form-horizontal" method="POST" action="/article/edit/{{id}}">
             <fieldset>
-                <legend>Edit Article</legend>
+                <legend>Edit clothing type</legend>
 
                 <div class="form-group">
-                    <label class="col-sm-4 control-label" for="articleTitle">Article Title</label>
+                    <label class="col-sm-4 control-label" for="articleTitle">Name</label>
                     <div class="col-sm-4 ">
-                        <input type="text" class="form-control" id="articleTitle" placeholder="Article Title" value="{{title}}" name="title" required>
+                        <input type="text" class="form-control" id="articleTitle" placeholder="Name of clothing" value="{{title}}" name="title" required>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="col-sm-4 control-label" for="articleContent">Content</label>
+                    <label class="col-sm-4 control-label" for="articleContent">Description</label>
                     <div class="col-sm-6">
                         <textarea class="form-control" id="articleContent" rows="5" name="content" required>{{content}}</textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-4 control-label" for="articleImageUrl">Image URL</label>
+                    <div class="col-sm-6">
+                        <textarea class="form-control" id="articleImageUrl" rows="5" name="imageUrl" required>{{imageUrl}}
+                        </textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-4 control-label" for="articleImage2Url">Additional image URL</label>
+                    <div class="col-sm-6">
+                        <textarea class="form-control" id="articleImage2Url" rows="5" name="image2Url" required>{{image2Url}}
+                        </textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-4 control-label" for="articleWhereToFind">Where to find ?</label>
+                    <div class="col-sm-6">
+                        <textarea class="form-control" id="articleWhereToFind" rows="5" name="whereToFind" required>{{whereToFind}}
+                        </textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-4 control-label" for="tags">Price</label>
+                    <div class="col-sm-4 ">
+                        <input type="text" class="form-control" id="tags" name="tags"
+                               value="{{ tagNames }}">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-4 control-label" form="articleBrand">Brand name</label>
+                    <div class="col-sm-4 ">
+                        <input type="text" class="form-control" id="articleBrand" name="brand" value="{{brand}}" required>
                     </div>
                 </div>
 
@@ -25,14 +59,6 @@
                                 <option value="{{this.id}}">{{this.name}}</option>
                             {{/each}}
                         </select>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label class="col-sm-4 control-label" for="tags">Tags</label>
-                    <div class="col-sm-4 ">
-                        <input type="text" class="form-control" id="tags" name="tags"
-                               value="{{ tagNames }}">
                     </div>
                 </div>
 

@@ -1,16 +1,16 @@
 <div class="container body-content">
     <div class="row">
         {{#each articles}}
-            <div class="col-md-6">
+            <div class="col-md-3">
                 <article>
                     <header>
                         <a href="/article/details/{{this.id}}" class="btn btn-default btn-lg btn-block">
                             {{ this.title }}
                             <br />
-                            <img src="{{this.imageUrl}}" width="222" height="333"/>
+                            <img src="{{this.imageUrl}}" width="222" height="233"/>
                         <p>
                             <div class="pull-left">
-                            Brand name - {{this.brand}}
+                            {{this.brand}}
                             </div>
                             <div class="pull-right">
                                 {{#each this.tags }}
@@ -18,9 +18,6 @@
                                 {{/each}}
                             </div>
                             <br />
-                            <div class="pull-left">
-                                {{ this.content }}
-                            </div>
                         </p>
 
                         </a>

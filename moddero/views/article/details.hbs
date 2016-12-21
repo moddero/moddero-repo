@@ -3,24 +3,47 @@
         <div class="col-md-12">
             <article>
                 <header>
-                    <h2>{{article.title}}</h2>
+                    <div class="breadcrumb">
+                        <table style="padding-left: 342px;" class="table table-striped table-hover ">
+                            <thead>
+                            <tr>
+                                <th><div class="pull-left">
+                                    <img src="{{article.imageUrl}}" width="222" height="233"/>
+                                    </div>
+                                    <div class="pull-right">
+                                        <img src="{{article.image2Url}}" width="222" height="233"/>
+                                    </div>
+                                </th>
+                                <th><u>Name:</u> {{ article.title }}
+                                    <br /><br /><br />
+                                    <u>Description:</u>
+                                    <br />
+                                    {{ article.content }}
+                                    <br /><br />
+                                    <u>Where to find ?:</u>
+                                    <br/>
+                                    {{ article.whereToFind }}
+                                    <br /><br />
+                                    <div class="pull-left">
+                                        <u>Brand:</u> {{article.brand}}
+                                    </div>
+                                    <div class="pull-right">
+                                        {{#each article.tags }}
+                                            <u>Price:</u> {{ this.name }} lv.
+                                        {{/each}}
+                                    </div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th><a href="#" class="btn btn-default btn-lg btn-block">Need help ? Get in touch with a fashion consultant.</a></th>
+                                <th><a href="#" class="btn btn-default btn-lg btn-block">FIND THE NEAREST STORE FOR THIS PRODUCT</a></th>
+                            </tr>
+                            </thead>
+                        </table>
+                    </div>
                 </header>
 
-                <p>
-                    {{article.content}}
-                </p>
-
-                <small class="author">
-                    {{article.author.fullName}}
-                </small>
-
                 <footer>
-                    <div class="pull-left">
-                        {{# each article.tags}}
-                            <a class="btn btn-default btn-xs"
-                               href="/tag/{{this.name}}">{{ this.name }}</a>
-                        {{/each}}
-                    </div>
                     <div class="pull-right">
                         {{#if isUserAuthorized}}
                             <a class="btn btn-success btn-xs" href="/article/edit/{{article.id}}">Edit &raquo;</a>

@@ -21,7 +21,7 @@ module.exports = {
         }
         else {
             Category.create(categoryArgs).then(category => {
-                res.redirect('admin/category/all');
+                res.redirect('all');
             })
         }
     },
